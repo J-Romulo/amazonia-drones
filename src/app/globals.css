@@ -19,3 +19,15 @@ html {
 a {
     text-decoration: none;
 }
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hint {
+    width: max-content;
+    font-size: 0.7rem;
+}
