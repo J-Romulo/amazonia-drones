@@ -47,7 +47,7 @@ export default function FastestRoute(){
                 </S.LeftSection>
                 <S.RightSection>
                         <S.Title>Está pronto para calcular sua entrega?</S.Title>
-                        <S.GuidanceText>Posicione os elementos no tabuleiro ao lado para formar sua rota de entrega e clique em "Calcular rota". O resultado irá aparecer logo abaixo.</S.GuidanceText>
+                        <S.GuidanceText>Posicione os elementos no tabuleiro ao lado para formar sua rota de entrega e clique em &apos;Calcular rota&apos;. O resultado irá aparecer logo abaixo.</S.GuidanceText>
 
                         {currentFastestRoute.length > 0 && currentTotalTime && 
                             <S.FastestRouteInfo>
