@@ -31,3 +31,47 @@ button {
     width: max-content;
     font-size: 0.7rem;
 }
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF0048;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    row-gap: 1rem;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 13px 27px -5px rgba(50, 50, 93, 0.25),
+		0px 8px 16px -8px rgba(0, 0, 0, 0.3),
+		0px -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.styledButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF0048;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.styledButton:hover {
+    background-color: #800024;
+}
+
+.presentationText {
+    text-align: justify;
+}

@@ -27,25 +27,6 @@ export const MainContent = styled.main`
 		0px -6px 16px -6px rgba(0, 0, 0, 0.025);
 `
 
-export const PresentationText = styled.p`
-    text-align: justify;
-`
-
-export const StyledButton = styled.a`
-      display: inline-block;
-  padding: 10px 20px;
-  background-color: #FF0048;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #800024;
-  }
-`
-
 const transitionAnimation = keyframes`
   0% {
     transform: translate(-100%, -100%) scale(0);

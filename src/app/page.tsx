@@ -22,7 +22,7 @@ export default function Home() {
   }
 
   return (
-    <S.Container>
+    <div className='container'>
       {
         isTransitioning &&          
         <S.TransitionImage
@@ -33,7 +33,7 @@ export default function Home() {
           className="active"
         />
       }
-      <S.MainContent>
+      <div className='mainContent'>
         <Image 
           src={amazonia_logo}
           width={250}
@@ -41,10 +41,10 @@ export default function Home() {
           quality={100}
           alt="Amazonia logo"
         />
-        <S.PresentationText>Bem-vindo ao Amazonia! O aplicativo que torna a entrega por drones rápida e eficiente. Insira as coordenadas iniciais, do objeto e do destino, e obtenha a rota mais rápida em segundos. Revolucione suas entregas agora mesmo!</S.PresentationText>
+        <p className='presentationText'>Bem-vindo ao Amazonia! O aplicativo que torna a entrega por drones rápida e eficiente. Insira as coordenadas iniciais, do objeto e do destino, e obtenha a rota mais rápida em segundos. Revolucione suas entregas agora mesmo!</p>
 
-        <S.StyledButton onClick={() => startTransition()}>Começar</S.StyledButton>
-      </S.MainContent>
-    </S.Container>
+        <a className='styledButton' onClick={() => startTransition()}>Começar</a>
+      </div>
+    </div>
   )
 }
