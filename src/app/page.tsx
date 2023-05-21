@@ -4,7 +4,6 @@ import * as S from './styles'
 import Image from 'next/image'
 import amazonia_logo from '../assets/amazonia_logo.png'
 import drone_image from '../assets/drone.png'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
