@@ -76,7 +76,7 @@ export function Chessboard({calculateRoute}: ChessboardProps) {
     }
 
     const renderSquare = (row: number, col: number) => {
-      const isDarkSquare = (row + col) % 2 === 1;
+      const isdarksquare = (row + col) % 2 === 1;
       const position = `${String.fromCharCode(65 + col)}${8 - row}`;
       const isSelected = checkSelected(position)
 
@@ -84,7 +84,7 @@ export function Chessboard({calculateRoute}: ChessboardProps) {
         <S.Square
           key={`${row}-${col}`}
           onClick={() => handleClick(row, col)}
-          isDarkSquare={isDarkSquare}
+          isdarksquare={isdarksquare}
           isSelected={isSelected}
         >
           {getIcon(position, isSelected)}

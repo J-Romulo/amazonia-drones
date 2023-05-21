@@ -87,7 +87,7 @@ export const Row = styled.div`
     }
 `
 
-export const Square = styled.div<{isDarkSquare: boolean; isSelected: boolean}>`
+export const Square = styled.div<{isdarksquare: boolean; isSelected: boolean}>`
     width: 1.8rem;
     height: 1.8rem;
     display: flex;
@@ -95,12 +95,12 @@ export const Square = styled.div<{isDarkSquare: boolean; isSelected: boolean}>`
     align-items: center;
     cursor: pointer;
     border: 1px solid #c7c7c7;
-    background-color: ${prop => prop.isDarkSquare ? '#FF0048' : 'white'};
+    background-color: ${prop => prop.isdarksquare ? '#FF0048' : 'white'};
     transition: transform 0.4s;
 
     > svg {
         display: ${prop => prop.isSelected ? 'block' : 'none'};
-        color: ${prop => prop.isDarkSquare ? '#FFF' : '#FF0048'};;
+        color: ${prop => prop.isdarksquare ? '#FFF' : '#FF0048'};;
     }
 
     &:hover {
