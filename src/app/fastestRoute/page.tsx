@@ -9,12 +9,13 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import api from '@/services/api';
 import Loader from '@/components/Loader';
+import { LastPaths } from '@/components/LastPaths';
 
 const ReactHint = ReactHintFactory(React);
 
 export default function FastestRoute(){
     const [isLoading, setIsLoading] = useState(false)
-    const [currentFastestRoute, setCurrentFastestRoute] = useState([])
+    const [currentFastestRoute, setCurrentFastestRoute] = useState<string[]>([])
     const [currentTotalTime, setCurrentTotalTime] = useState()
 
     async function calculateFastestRoute(starting_point: string, object: string, destination: string){
@@ -26,7 +27,6 @@ export default function FastestRoute(){
             setCurrentTotalTime(data.total_time)
             setIsLoading(false)
         }catch(err){
-            console.log(err)
             toast.error('Ocorreu um erro ao calcular a rota. Tente novamente em instantes.')
         }
     }
@@ -57,10 +57,15 @@ export default function FastestRoute(){
                                 </S.FastestRouteField>
                                 <S.FastestRouteField>
                                     <S.FastestRouteLabel>Tempo total:</S.FastestRouteLabel>
-                                    <S.FastestRouteData>{currentTotalTime} segundos</S.FastestRouteData>
+                                    <S.FastestRouteData>{Number(currentTotalTime).toFixed(0)} segundos</S.FastestRouteData>
                                 </S.FastestRouteField>
                             </S.FastestRouteInfo>
                         }
+
+                        <S.LastPathsTitle>Últimas rotas calculadas:</S.LastPathsTitle>
+                        <S.LastPathsContainer>
+                            <LastPaths parentLoading={isLoading}/>
+                        </S.LastPathsContainer>
                 </S.RightSection>
             </S.MainContent>
         </HomeStyle.Container>

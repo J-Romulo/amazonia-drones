@@ -75,7 +75,7 @@ export function Chessboard({calculateRoute}: ChessboardProps) {
         }
     }
 
-    const renderSquare = (row: number, col: number) => {
+    function renderSquare(row: number, col: number) {
       const isdarksquare = (row + col) % 2 === 1;
       const position = `${String.fromCharCode(65 + col)}${8 - row}`;
       const isSelected = checkSelected(position)
@@ -92,7 +92,7 @@ export function Chessboard({calculateRoute}: ChessboardProps) {
       );
     };
   
-    const renderRow = (row: number) => {
+    function renderRow(row: number) {
       const squares = [];
   
       for (let col = 0; col < 8; col++) {
@@ -107,7 +107,7 @@ export function Chessboard({calculateRoute}: ChessboardProps) {
       )
     };
   
-    const renderBoard = () => {
+    function renderBoard() {
       const rows = [];
   
       for (let row = 0; row < 8; row++) {
